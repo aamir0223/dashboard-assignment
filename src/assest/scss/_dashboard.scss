@@ -1,9 +1,185 @@
 .dashboard {
-    background: red;
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+    width: 100%;
 
-    h1 {
-        font-size: 30px;
-        color: blue;
+    background: #fafafa;
+
+    .left-side {
+        width: 15%;
+
+
     }
 
+    .right-side {
+        width: 80%;
+
+
+        .top-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .filter {
+                width: 200px;
+
+                .MuiFormControl-root {
+                    width: 100%;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+
+                    border-radius: 8px;
+                    padding: 2.5px 0;
+
+                    .label {
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: rgba(0, 0, 0, 0.3);
+                        margin-top: 19px;
+                        margin-left: 0px;
+                        z-index: -1;
+                    }
+
+                    .MuiInputBase-root {
+                        margin-top: 0px !important;
+                    }
+
+                    .MuiInputBase-root {
+                        border: none;
+
+                        .MuiSvgIcon-root {
+                            margin-right: 10px;
+                        }
+
+                        .MuiInputBase-input {
+                            padding: 5px 20px;
+                            font-size: 14px;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        .body {
+            .top-body {
+                display: flex;
+                width: 100%;
+                height: 400px;
+                gap: 20px;
+
+                .line-graph {
+                    padding: 10px 20px;
+                    width: 75%;
+                    height: 100%;
+                    background: #fff;
+                    box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .24), 0 0 0 1px rgba(71, 71, 71, .08);
+                    border-radius: 6px;
+                }
+
+                .top-pie-chart {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 25%;
+
+
+
+
+                    .job-function-year {
+                        padding: 2px 20px;
+                        background: #fff;
+                        border-radius: 16px;
+                        width: 100%;
+                        height: 200px;
+                        box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .24), 0 0 0 1px rgba(71, 71, 71, .08);
+                        border-radius: 6px;
+
+
+                        h1 {
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: $theme-text;
+                            margin-bottom: 10px;
+                            text-align: center;
+                        }
+
+                        .chart {
+                            height: 130px;
+                            width: 100%;
+
+                        }
+
+                        .wrapper-list {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            flex-wrap: wrap;
+                            margin: auto;
+                            padding-left: 15px;
+                            margin-top: -10px;
+
+                            .pie-legend-list {
+                                display: flex;
+                                align-items: center;
+                                flex: 0 0 33.333333%;
+                                margin-bottom: 10px;
+
+                                .pie-legend-list-item {
+                                    width: 100%;
+
+                                    .dots {
+                                        width: 12px;
+                                        height: 12px;
+                                        border-radius: 50%;
+                                    }
+
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+
+                                    p {
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        color: rgba(64, 64, 64, 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .second-pie-chart {
+                height: 400px;
+                display: flex;
+                width: 100%;
+                height: 350px;
+                gap: 30px;
+
+                .pie {
+                    width: 50%;
+                    height: 100%;
+                    background: #fff;
+                    box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .24), 0 0 0 1px rgba(71, 71, 71, .08);
+
+                    .pie-chat {
+                        width: 100%;
+                        text-align: center;
+                        height: 70%;
+
+
+                        h2 {
+                            font-size: 20px;
+                            text-align: center;
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
 }
