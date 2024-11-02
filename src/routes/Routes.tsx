@@ -7,6 +7,7 @@ import Dashboard from '../Page/Dashboard';
 const Routes = () => {
     return (
         <AllRoutes>
+            <Route path="/" element={<Navigate to="/Dashboard" />} />
             <Route path="/Dashboard" element={<Dashboard />} />
         </AllRoutes>
     )
