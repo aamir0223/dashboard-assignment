@@ -1,183 +1,467 @@
-.dashboard {
-    display: flex;
-    gap: 20px;
-    padding-top: 30px;
-    width: 100%;
+.content {
+    .pages {
+        position: relative;
+        position: relative;
+        overflow: hidden;
+        border-radius: 13.347px;
+        min-height: 670px;
+        background: #fff;
+        box-shadow: 0px 1.112px 2.224px 0px rgba(28, 28, 28, 0.24),
+            0px 0px 0px 1.112px rgba(28, 28, 28, 0.08);
+        z-index: 0;
 
-    background: #fafafa;
-
-    .left-side {
-        width: 15%;
-
-
-    }
-
-    .right-side {
-        width: 80%;
-
-
-        .top-section {
+        .bg_circle-wrapper {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            position: absolute;
 
-            .filter {
+            z-index: -1;
+            opacity: 0.2;
+            -moz-opacity: 0.07;
+
+            &>.circle {
+                border-radius: 325px;
+
+                flex: 1 1 30%;
+                overflow: visible;
+            }
+
+            .circle-one {
+                filter: blur(50px);
+                position: absolute;
+                width: 550px;
+                height: 700px;
+                left: 0rem;
+                top: 10px;
+                border-radius: 100%;
+
+                background: #bde6fc;
+            }
+
+            .circle-two {
+                filter: blur(120px);
+                position: absolute;
+                right: 0.75rem;
+                left: 62.75rem;
+                top: 30rem;
                 width: 200px;
+                height: 325px;
+                background: #7f00bb;
+            }
 
-                .MuiFormControl-root {
-                    width: 100%;
-                    border: 1px solid rgba(0, 0, 0, 0.2);
-
-                    border-radius: 8px;
-                    padding: 2.5px 0;
-
-                    .label {
-                        font-size: 18px;
-                        font-weight: 400;
-                        color: rgba(0, 0, 0, 0.3);
-                        margin-top: 19px;
-                        margin-left: 0px;
-                        z-index: -1;
-                    }
-
-                    .MuiInputBase-root {
-                        margin-top: 0px !important;
-                    }
-
-                    .MuiInputBase-root {
-                        border: none;
-
-                        .MuiSvgIcon-root {
-                            margin-right: 10px;
-                        }
-
-                        .MuiInputBase-input {
-                            padding: 5px 20px;
-                            font-size: 14px;
-                            background: transparent;
-                        }
-                    }
-                }
+            .circle-three {
+                filter: blur(180px);
+                position: absolute;
+                top: 30rem;
+                left: 0rem;
+                width: 220px;
+                height: 225px;
+                background: #7f00bb;
             }
         }
 
-        .body {
-            .top-body {
-                display: flex;
-                width: 100%;
-                height: 400px;
-                gap: 20px;
+        .dashboard {
+            display: flex;
+            align-items: flex-start;
 
-                .line-graph {
-                    padding: 10px 20px;
-                    width: 75%;
-                    height: 100%;
-                    background: #fff;
-                    box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .24), 0 0 0 1px rgba(71, 71, 71, .08);
-                    border-radius: 6px;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            overflow-y: hidden;
+
+
+            .left-side {
+                width: 15%;
+                background: #fff;
+                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+                height: 100vh;
+
+                .side-bar {
+
+
+                    .logo {
+                        color: #0034bb;
+                        font-size: 30px;
+                        font-weight: 700;
+                        padding-left: 20px;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                        padding-bottom: 10px;
+                    }
+
+                    .nav {
+                        font-size: 18px;
+                        color: #0034bb;
+                        background: rgba(0, 52, 187, .1);
+
+                        padding: 10px 20px;
+                        border-right: 4px solid #0034bb;
+                    }
                 }
 
-                .top-pie-chart {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    width: 25%;
+            }
+
+            .right-side {
+                width: 85%;
+                overflow-y: scroll;
+                height: 100vh;
+                padding: 20px;
+                padding-bottom: 0px;
 
 
+                .body {
 
 
-                    .job-function-year {
-                        padding: 2px 20px;
-                        background: #fff;
-                        border-radius: 16px;
-                        width: 100%;
-                        height: 200px;
-                        box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .24), 0 0 0 1px rgba(71, 71, 71, .08);
-                        border-radius: 6px;
+                    .metrics {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        .metrics-card {
+
+                            border-radius: 12px;
+                            padding: 20px 20px;
+                            padding-top: 10px;
+                            min-width: 190px;
+                            background: #fff;
+                            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+
+                            h3 {
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: grey;
 
 
-                        h1 {
-                            font-size: 18px;
-                            font-weight: 600;
-                            color: $theme-text;
-                            margin-bottom: 10px;
-                            text-align: center;
-                        }
+                            }
 
-                        .chart {
-                            height: 130px;
-                            width: 100%;
-
-                        }
-
-                        .wrapper-list {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-
-                            flex-wrap: wrap;
-                            margin: auto;
-                            padding-left: 15px;
-                            margin-top: -10px;
-
-                            .pie-legend-list {
-                                display: flex;
-                                align-items: center;
-                                flex: 0 0 33.333333%;
+                            p {
+                                font-size: 28px;
+                                font-weight: 700;
+                                line-height: 20px;
+                                margin-top: 20px;
                                 margin-bottom: 10px;
+                                color: #0034bb;
 
-                                .pie-legend-list-item {
-                                    width: 100%;
 
-                                    .dots {
-                                        width: 12px;
-                                        height: 12px;
-                                        border-radius: 50%;
-                                    }
-
-                                    display: flex;
-                                    align-items: center;
-                                    gap: 10px;
-
-                                    p {
-                                        font-size: 14px;
-                                        font-weight: 400;
-                                        color: rgba(64, 64, 64, 1);
-                                    }
-                                }
                             }
                         }
                     }
 
-                }
-            }
 
-            .second-pie-chart {
-                height: 400px;
-                display: flex;
-                width: 100%;
-                height: 350px;
-                gap: 30px;
-
-                .pie {
-                    width: 50%;
-                    height: 100%;
-                    background: #fff;
-                    box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .24), 0 0 0 1px rgba(71, 71, 71, .08);
-
-                    .pie-chat {
+                    .top-body {
+                        display: flex;
                         width: 100%;
-                        text-align: center;
-                        height: 70%;
+                        height: 400px;
+                        gap: 20px;
 
+                        .line-graph {
+                            h2 {
+                                font-size: 21px;
+                                font-weight: 600;
+                                color: #121212;
+
+                            }
+
+                            padding: 4px 15px;
+                            width: 67%;
+                            height: 84%;
+                            background: #fff;
+                            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+                            border-radius: 12px;
+                            padding-bottom: 80px;
+                        }
+
+                        .top-pie-chart {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            width: 25%;
+
+
+
+
+                            .year-model {
+                                padding: 2px 20px;
+                                background: #fff;
+                                border-radius: 16px;
+                                width: 100%;
+                                height: 193px;
+                                background: #fff;
+                                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+                                border-radius: 6px;
+                                padding-bottom: 10px;
+
+
+                                h1 {
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    color: #121212;
+                                    margin-bottom: 10px;
+
+                                }
+
+                                .chart {
+                                    height: 120px;
+                                    width: 100%;
+
+                                }
+
+                                .wrapper-list {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    flex-wrap: wrap;
+                                    margin: auto;
+                                    padding-left: 15px;
+                                    margin-top: -10px;
+
+                                    .pie-legend-list {
+                                        display: flex;
+                                        align-items: center;
+                                        flex: 0 0 33.333333%;
+                                        margin-bottom: 10px;
+
+                                        .pie-legend-list-item {
+                                            width: 100%;
+
+                                            .dots {
+                                                width: 12px;
+                                                height: 12px;
+                                                border-radius: 50%;
+                                            }
+
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+
+                                            p {
+                                                font-size: 14px;
+                                                font-weight: 400;
+                                                color: rgba(64, 64, 64, 1);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                    .pie-chart {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        gap: 20px;
+                        margin: 20px 0px;
+
+                        .lists-and-pie-v2 {
+                            min-height: 420px;
+                            border-radius: 12px;
+                            width: 50%;
+                            background: #fff;
+
+                            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+                            padding: 20px 10px;
+                            padding-left: 0px;
+
+
+
+
+                        }
+                    }
+
+                    .third-section {
+                        display: flex;
+                        align-items: flex-start;
+                        width: 99%;
+                        gap: 30px;
+                        height: 400px;
+
+                        .table-container {
+                            width: 45%;
+                            height: 100%;
+                            background: #fff;
+                            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+                            padding: 20px;
+                            margin-top: 40px;
+                            border-radius: 12px;
+
+                            h2 {
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+
+                            .table {
+
+                                width: 100%;
+                                overflow-x: scroll;
+
+
+
+                                table {
+                                    width: 800px;
+
+                                    thead {
+                                        tr {
+                                            background: rgba(33, 33, 33, 0.05);
+                                            border-radius: 12px;
+                                            height: 45px;
+
+
+                                            th {
+                                                font-size: 14px;
+                                                font-weight: 500;
+                                                width: 300px;
+                                            }
+                                        }
+
+                                    }
+
+                                    tbody {
+                                        tr {
+                                            td {
+                                                text-align: center;
+                                                font-size: 14px;
+                                                font-weight: 400;
+                                                padding: 12px;
+                                                border-bottom: 1px solid rgba(69, 69, 69, 0.1);
+                                            }
+                                        }
+                                    }
+                                }
+
+
+                            }
+
+                            button {
+
+                                border: none;
+                                background: transparent;
+                                color: #fff;
+                            }
+
+                            .page {
+                                margin-top: 10px;
+                            }
+                        }
+
+                        .right-pie {
+                            display: flex;
+                            align-items: flex-start;
+                            flex-wrap: wrap;
+                            width: 50%;
+                            gap: 20px;
+                            margin-top: 40px;
+                            background: #fff;
+                            background: #fff;
+                            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+                            padding: 20px 20px;
+                            border-radius: 12px;
+
+
+                        }
+                    }
+
+                }
+
+                .container {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    width: 100%;
+
+                    .pie {
+                        margin: auto;
+                        height: 400px;
+                        width: 55%;
 
                         h2 {
-                            font-size: 20px;
-                            text-align: center;
+                            font-size: 21px;
+                            font-weight: 600;
+                            color: #121212;
+                            padding-left: 15px;
+                            margin-top: 12px;
                         }
 
                     }
+
+                    .lists {
+                        width: 40%;
+                        height: 400px;
+                        overflow: scroll;
+
+                        .lists-container {
+                            .item {
+                                width: 100%;
+
+                                .item-list {
+                                    padding-left: 0px;
+                                    transition: all 0.5s;
+
+
+                                    .list-name-v2 {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        padding: 6px 14px;
+                                        cursor: pointer;
+                                        gap: 15px;
+
+                                        .name {
+                                            display: flex;
+                                            gap: 10px;
+
+                                            p {
+                                                font-size: 12px;
+                                                font-weight: 400;
+                                                color: rgba(33, 33, 33, 1);
+                                            }
+
+                                            .uni {
+                                                width: 150px;
+                                                font-size: 12px;
+                                                font-weight: 400;
+                                                color: rgba(33, 33, 33, 1);
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 1;
+                                                -webkit-box-orient: vertical;
+                                                overflow: hidden;
+                                            }
+                                        }
+
+                                        .button {
+                                            background: transparent;
+                                            border: none;
+                                            outline: none;
+                                            padding: 4px 10px;
+                                            border-radius: 6px;
+                                            font-size: 11px;
+                                            font-weight: 600;
+                                            color: rgba(0, 52, 187, 1);
+
+                                            min-width: 60px;
+                                        }
+
+                                        &:hover {
+                                            background: rgba(0, 52, 187, 0.09);
+                                            border-radius: 9px;
+                                        }
+                                    }
+                                }
+
+                                .active {
+                                    background: rgba(0, 52, 187, 0.09);
+                                    border-radius: 9px;
+                                }
+                            }
+                        }
+                    }
                 }
+
             }
         }
 

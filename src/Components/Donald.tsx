@@ -4,11 +4,8 @@ import { Icon } from '@mui/material';
 
 const Donald: React.FC<{ data: any, heading: any }> = ({ data, heading }) => {
 
-
-
-  console.log("data", data)
   return (
-    <div className="job-function-year">
+    <div className="year-model">
       <h1>
         {heading}
       </h1>

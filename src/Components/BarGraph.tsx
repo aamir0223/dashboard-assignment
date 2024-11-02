@@ -36,7 +36,7 @@ const BarGraph: React.FC<{ data: any }> = ({ data }) => {
   return (
     <div className='line-graph'>
 
-      {/* <h2>Electric Range by Model Year</h2> */}
+      <h2>Number of Vehicles by Model Year</h2>
       <ResponsiveBar
         data={barData}
         keys={['electricRange']}

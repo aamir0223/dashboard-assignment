@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Papa from 'papaparse';
-
-import TopSection from '../Components/TopSection';
 import SideBar from '../Components/SideBar';
 import Body from '../Components/Body';
 
@@ -13,7 +11,6 @@ const Dashboard = () => {
 
 
     useEffect(() => {
-        // Fetch the CSV file from the public directory
         fetch('../Electric_Vehicle_Population_Data.csv')
             .then((response) => {
                 if (!response.ok) {
@@ -22,7 +19,6 @@ const Dashboard = () => {
                 return response.text();
             })
             .then((csvText) => {
-                // Parse the CSV text into JSON
                 Papa.parse(csvText, {
                     header: true, // Treat the first row as headers
                     skipEmptyLines: true, // Skip empty lines
@@ -49,17 +45,30 @@ const Dashboard = () => {
     console.log("jsonData", jsonData)
 
     return (
-        <div className='dashboard'>
-            <div className='left-side'>
-                <SideBar />
-            </div>
-            <div className='right-side'>
-                {/* <TopSection /> */}
-                <Body data={jsonData} />
+        <div className="content">
+            <div className="pages">
+                <div className="bg_circle-wrapper">
+                    <div className="circle circle-one" />
+                    <div className="circle circle-two" />
+                    <div className="circle circle-three" />
+                </div>
 
+                <div className='dashboard'>
+                    <div className='left-side'>
+                        <SideBar />
+                    </div>
+                    <div className='right-side'>
+
+                        <Body data={jsonData} />
+
+
+                    </div>
+                </div>
 
             </div>
         </div>
+
+
     )
 }
 
